@@ -1,0 +1,18 @@
+{
+  "name": "PRAZER — Patent Prior-Art & Novelty Engine",
+  "short_name": "PRAZER",
+  "description": "Autonomous Patent Prior-Art & Novelty Engine with Indian Patent Office #1 Priority Statutory Legal Clearance",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#06090e",
+  "theme_color": "#4361ee",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo.jpeg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
