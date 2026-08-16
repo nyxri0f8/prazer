@@ -1,11 +1,14 @@
 # Environment Variables & Secrets
 .env
 *.env
+*.env.backup
+.env.backup
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 prazer-backend/.env
+prazer-backend/.env.backup
 
 # Flutter / Dart
 prazer_app/.dart_tool/
