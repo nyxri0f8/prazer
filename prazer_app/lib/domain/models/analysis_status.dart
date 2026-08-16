@@ -4,6 +4,7 @@ enum PipelineStage {
   retrieval,
   vectorMath,
   llmSynthesis,
+  processing,
   completed,
   failed,
 }
