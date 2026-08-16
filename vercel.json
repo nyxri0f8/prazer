@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "public": true,
-  "buildCommand": null,
   "outputDirectory": "web_preview",
   "cleanUrls": true,
   "routes": [
