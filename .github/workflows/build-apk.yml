@@ -22,7 +22,6 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.x'
           channel: 'stable'
           cache: true
 
@@ -30,7 +29,7 @@ jobs:
         working-directory: prazer_app
         run: |
           if [ ! -d "android" ]; then
-            flutter create --org com.prazer.patent .
+            flutter create --org com.prazer.patent --platforms=android .
           fi
 
       - name: Install Dependencies
