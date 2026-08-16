@@ -38,7 +38,7 @@ jobs:
 
       - name: Build Release APK
         working-directory: prazer_app
-        run: flutter build apk --release
+        run: flutter build apk --release --no-tree-shake-icons
 
       - name: Upload Release APK as Artifact
         uses: actions/upload-artifact@v4
