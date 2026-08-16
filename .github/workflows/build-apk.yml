@@ -1,0 +1,48 @@
+name: Build PRAZER Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.x'
+          channel: 'stable'
+          cache: true
+
+      - name: Generate Android Project Skeleton if missing
+        working-directory: prazer_app
+        run: |
+          if [ ! -d "android" ]; then
+            flutter create --org com.prazer.patent .
+          fi
+
+      - name: Install Dependencies
+        working-directory: prazer_app
+        run: flutter pub get
+
+      - name: Build Release APK
+        working-directory: prazer_app
+        run: flutter build apk --release
+
+      - name: Upload Release APK as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: prazer-patent-release-apk
+          path: prazer_app/build/app/outputs/flutter-apk/app-release.apk

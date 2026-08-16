@@ -1,0 +1,28 @@
+
+# Files for writing throwaway code
+/rough.py
+/tmp*
+/tests/test_tmp.py
+
+*.pyc
+__pycache__
+/build/
+
+# Folders containing heavy files
+/models/*
+/indexes/*
+/datalab/*
+
+!indexes/README.md
+!models/README.md
+
+/tokens.txt
+
+/.tmuxinator.yml
+/.env
+
+/plugins/custom/
+/.vscode
+
+/*.log.*
+/*.log
